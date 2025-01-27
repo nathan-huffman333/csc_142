@@ -1,16 +1,9 @@
-#include <iostream>
-#include <vector>
-#include <string>
+#include <iostream> // Required for input and output
 
-using namespace std;
+int main() {
+    // Print "Hello, World!" to the console
+    std::cout << "Hello, World!" << std::endl;
 
-int main()
-{
-    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
-
-    for (const string& word : msg)
-    {
-        cout << word << " ";
-    }
-    cout << endl;
+    // Return 0 to indicate successful execution, optional but good backwards compatible
+    return 0;
 }
