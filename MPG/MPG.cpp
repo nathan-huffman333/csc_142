@@ -35,6 +35,7 @@
  */
 
 #include <iostream>
+#include <iomanip>
 
 int main(){   
     // Constant declarations
@@ -78,8 +79,8 @@ int main(){
     std::cout<<"\n";
     std::cout<<"Fuel efficiency of your " + desc + ":"<<std::endl;
     std::cout<<"You drove " << miles << " miles and used " << gallons << " gallons."<<std::endl;
-    std::cout<<"You drove " << kilometers << " kilometers and used " << liters << " liters."<<std::endl;
-    std::cout<<"Your fuel efficiency is " << mpg << " miles per gallon."<<std::endl;
-    std::cout<<"Your fuel efficiency is " << L_PER_HUNDRED_KILOMETER << " liters per 100 kilometers."<<std::endl;
+    std::cout<<"You drove " << std::fixed << std::setprecision(2) << kilometers << " kilometers and used " << std::fixed << std::setprecision(2) << liters << " liters."<<std::endl;
+    std::cout<<"Your fuel efficiency is " << std::fixed << std::setprecision(2) << mpg << " miles per gallon."<<std::endl;
+    std::cout<<"Your fuel efficiency is " << std::fixed << std::setprecision(2) << L_PER_HUNDRED_KILOMETER << " liters per 100 kilometers."<<std::endl;
     return 0;
 }
