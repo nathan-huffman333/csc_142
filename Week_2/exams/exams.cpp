@@ -1,5 +1,5 @@
 /*
-    File name: exams.cpp
+    File name: Exams.cpp
     Description: This program takes three exam scores and the user's name, then calculates the average score of the three and prints all of the information.
     Name: Nathan Huffman
     Date: 1/29/2025
