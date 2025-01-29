@@ -8,14 +8,17 @@
 #include <iostream>
 
 int main() {
+    //Declare variables
     int speed_limit;
     double current_speed;
 
+    //Have the user enter the speed limit and their speed.
     std::cout<<"Enter the speed limit: ";
     std::cin>>speed_limit;
     std::cout<<"Enter your current speed: ";
     std::cin>>current_speed;
 
+    //Depending on the user's speed, a different message is printed.
     if (current_speed > speed_limit)
         std::cout << "You are speeding, you are getting a speed ticket." << std::endl;
     else
