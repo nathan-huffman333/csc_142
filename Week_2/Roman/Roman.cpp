@@ -1,52 +1,42 @@
 /*
     File name: Roman.cpp
-    Description: This program
+    Description: This program converts the users number from one to ten to the roman numeral equivalent.
     Name: Nathan Huffman
-    Date: 1/29/2025
-       
-
-            - Use a do-while loop to prompt the user for an integer input in the range 1
-            through 10, inclusive. If the input is not in range let them try again. Repeat until
-            the user successfully enters a correct value.
-
-            - Once a valid value is entered, print a descriptive message that reports the
-            roman numeral that is equal to the value given.
-
-        Specifications:
-
-            For full credit, your program must meet the following specifications:
-                1. Your method of converting the number to a Roman numeral must use only one
-                multi-branch if statement. You must not use the Boolean operators && (and),
-                || (or), and ! (not) when performing the conversion.
-
-                2. Use meaningful variable names and follow all naming conventions.
-                
-                3. Use meaningful prompts and output messages.
-
-                4. User input that is invalid must be handled sensibly, as described above. Invalid
-                input in this case would be a number that is not in the range [1, 10], inclusive.
-                (You may assume that only integers will be input.) Your program must print an
-                appropriate message if the user input is outside the range [1, 10] and allow the
-                user to re-enter their number.
-
-            Extra-credit opportunity:
-                For up to 3 additional points, extend your program so that it generates the correct
-                response for any integer value in the range [1, 100], inclusive.
-                If you choose to do the extra credit, to achieve the maximum extra credit you may use
-                at most two multi-branch if statements to generate the Roman numeral.
-                (Hint: Don’t use a 100-branch if statement! Instead, find a creative way to separate the
-                tens from the ones...)
-
+    Date: 1/30/2025
 */
 
-#include <ostream>
+#include <iostream>
 
 int main() {
-    int num1;
+    int num;
 
     do {
 		std::cout<<"Enter a number between 1 and 10: ";
-        std::cin>>num1;
-	} while(num1 < 1 || num1 > 10); 
+        std::cin>>num;
+        if (num < 1 || num > 10)
+            std::cout<<"That number is invalid. Please try again.\n";
+	} while(num < 1 || num > 10);    
+
+
+    if (num == 1)
+        std::cout << "Roman Numeral: I" << std::endl;
+    else if (num == 2)
+        std::cout << "Roman Numeral: II" << std::endl;
+    else if (num == 3)
+        std::cout << "Roman Numeral: III" << std::endl;
+    else if (num == 4)
+        std::cout << "Roman Numeral: IV" << std::endl;
+    else if (num == 5)
+        std::cout << "Roman Numeral: V" << std::endl;
+    else if (num == 6)
+        std::cout << "Roman Numeral: VI" << std::endl;
+    else if (num == 7)
+        std::cout << "Roman Numeral: VII" << std::endl;
+    else if (num == 8)
+        std::cout << "Roman Numeral: VIII" << std::endl;
+    else if (num == 9)
+        std::cout << "Roman Numeral: IX" << std::endl;
+    else if (num == 10)
+        std::cout << "Roman Numeral: X" << std::endl;
 
 }
