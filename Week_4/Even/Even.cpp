@@ -26,8 +26,8 @@ int main(){
         counter++;}
 
     std::cout << "Numbers generated: " << counter << std::endl;
-    std::cout << "Evens: " << even << std::endl;
-    std::cout << "Odds: " << odd << std::endl;
+    std::cout << "Number of Evens: " << even << std::endl;
+    std::cout << "Number of Odds: " << odd << std::endl;
 
     return 0;
 }
