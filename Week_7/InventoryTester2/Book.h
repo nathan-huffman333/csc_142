@@ -44,6 +44,7 @@ class Book{
         // This setter method allows for the price of the book to be changed.
         void changePrice(double newPrice){price = newPrice;};
 
+    // The friend overload is created to add all of the information about the book formatted correctly to the array.
     friend std::ostream& operator<<(std::ostream& output, Book book){
         char c_text[100];
         std::string text = c_text;
@@ -52,8 +53,9 @@ class Book{
 
         return output;};
 
+    // If two ISBNs are the same, the book is not added to the inventory.
     friend bool operator ==(Book mainbook, Book otherbook){
-            if (mainbook.getISBN() == otherbook.getISBN()){return true;}
-            else {return false;};
+        if (mainbook.getISBN() == otherbook.getISBN()){return true;}
+        else {return false;};
     };
 };

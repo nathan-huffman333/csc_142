@@ -41,7 +41,7 @@ class Inventory{
 
         // This method prints the inventory of the array in an aligned format using printf.  
         void printInventory(){
-            for (int i = 0; i < length; i++){
+            for (int i = 0; i < nextEntry; i++){
                 std::cout << books[i] << std::endl;
             };             
 };

@@ -1,56 +1,8 @@
 /*
-    Task 1:
-        operator<<( output : std::ostream&, book : Book ) : std::ostream&
-        Input: This overload takes in an output stream and a Book object as arguments.
-        Return: A single output stream, in which each of the six fields of the book object are
-        appropriately formatted and concatenated together.
-
-Specifications:
-    Your program includes appropriate comments for documentation, uses meaningful
-    names, prompts, and messages, and follows the naming conventions.
-    Your program must include all features from the previous labs that used the Book class.
-    The program must correctly add only a single copy of each book: if two entries have the
-    same ISBN number, only one shall be added to the inventory.
-    The program must not crash if more than ten books are added to the inventory.
-    Example output is shown below. Your exact formatting may be different, but all
-    information must be clear, present, and understandable, with aligned columns.
-
-    Example Output for InventoryTester.cpp:
-
-        ERROR adding this book: 013478796X
-        ERROR adding this book: 0134462017
-        Initial Inventory Report:
-        -----------------------------------------------------------------------------------------
-        ISBN        AUTHOR          TITLE                                       ED  PUB     PRICE
-        013478796X  Tony Gaddis     Starting Out With Java: From Control Str     4   PE  $ 121.75
-        0321409493  John Lewis      Java Software Solutions: Foundations of      5   AW  $  94.00
-        0134743350  Harvey Deitel   Java How to Program, Early Objects          12   PE  $ 134.84
-        002360692X  Richard Johnso  Algorithms                                   1   PH  $ 109.00
-        1593276036  Eric Matthes    Python Crash Course                          1   NS  $  39.95
-        0143067889  Ray Kurzweil    The Singularity is Near                      1   PG  $  17.70
-        0134444329  Tony Gaddis     Starting Out With Python                     4   PE  $  99.95
-        0133582736  Tony Gaddis     Starting Out With Python                     3   PE  $  19.95
-        1119056553  Cay Horstmann   Python for Everyone                          2   WI  $  98.38
-        0134802217  Tony Gaddis     Starting Out With Java: From Control Str     7   PE  $ 188.95
-        -----------------------------------------------------------------------------------------
-        Changing price of 013478796X to $ 50.00
-        Changing price of 0143067889 to $ 9.95
-        Changing price of 0134743350 to $ 100.00
-
-        Final Inventory Report:
-        -----------------------------------------------------------------------------------------
-        ISBN        AUTHOR          TITLE                                       ED  PUB     PRICE
-        013478796X  Tony Gaddis     Starting Out With Java: From Control Str     4   PE  $  50.00
-        0321409493  John Lewis      Java Software Solutions: Foundations of      5   AW  $  94.00
-        0134743350  Harvey Deitel   Java How to Program, Early Objects          12   PE  $ 100.00
-        002360692X  Richard Johnso  Algorithms                                   1   PH  $ 109.00
-        1593276036  Eric Matthes    Python Crash Course                          1   NS  $  39.95
-        0143067889  Ray Kurzweil    The Singularity is Near                      1   PG  $   9.95
-        0134444329  Tony Gaddis     Starting Out With Python                     4   PE  $  99.95
-        0133582736  Tony Gaddis     Starting Out With Python                     3   PE  $  19.95
-        1119056553  Cay Horstmann   Python for Everyone                          2   WI  $  98.38
-        0134802217  Tony Gaddis     Starting Out With Java: From Control Str     7   PE  $ 188.95
-        -----------------------------------------------------------------------------------------
+    File name: InventoryTester.cpp
+    Description: This program creates and displays an array of books with different information, and ensures that copies are not added.
+    Name: Nathan Huffman
+    Date: 3/6/2025
 
 
 Extra Credit Opportunity:
@@ -103,7 +55,7 @@ Extra Credit Opportunity:
 
 int main(){
     // The inventory is created with 20 possible slots for books.
-    Inventory Inventory(11);
+    Inventory Inventory(20);
 
     // Twelve book objects are created using the information specified.
     Book book1 = Book("013478796X", "Tony Gaddis", "Starting Out With Java: From Control Structures through Data Structures", 4, "PE", 118.30);
