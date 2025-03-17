@@ -3,47 +3,6 @@
     Description: This program creates and displays an array of books with different information, and ensures that copies are not added.
     Name: Nathan Huffman
     Date: 3/6/2025
-
-
-Extra Credit Opportunity:
-    The 10-digit version of the International Standard Book Number code is a redundant,
-    error-detecting code consisting of a unique, 9-digit book code followed by a check digit—
-    the last digit of the ten-digit code. The ISBN-10 specification has a very specific
-    algorithm for the check digit. If an ISBN code is inadvertently mistyped or otherwise
-    incorrect the algorithm’s check digit will not match the one provided. If the provided
-    check digit is different from the calculated check digit, the ISBN code is not valid. This
-    check digit technique will identify many (but not all) such errors.
-    The algorithm is explained well in Wikipedia: https://en.wikipedia.org/wiki/ISBN#Check_digits
-
-
-    For up to (+10) points extra credit, add a new method to your Book class:
-
-        (*HINT: You'll want to use type casting so that you can convert a character like '5' to an
-        actual int value of 5)
-        (**HINT: When casting a character to an int, you will receive the ASCII value of that character
-        and not the value you expect. Look below and find the ASCII values of each number key)
-                                      https://www.ascii-code.com/
-        (Can you come up with a clever way to translate a number key's ASCII value to its integer value?)
-
-        + isValidISBN() : boolean
-        Input: This method takes no arguments.
-        Return: This method will return a Boolean indicating whether a Book object’s
-        ISBN is valid. If there is an error in the ISBN String the check digit will not match
-        and the method will return false. If the check digit is confirmed as correct the
-        method will return true.
-
-        Modify your operator<<() overload in your Book class to check the ISBN String. If the
-        string is invalid, mark it in the output by adding an asterisk ('*') immediately after the
-        ISBN in the string.
-        There is at least one incorrect ISBN numbers in the data for this lab. Can you tell which?
-        For the full extra credit, do this in a way that the output columns are still neatly aligned:
-        (* You can use the .append() method for a std::string to place a character at the end of the string *)
-        ------------------------------------------------------------------------------------------
-        ISBN         AUTHOR          TITLE                                       ED  PUB     PRICE
-        0134802217   Tony Gaddis     Starting Out With Java: From Control Str     7   PE  $ 188.95
-        0321173486*  Shreiner        OpenGL Programming Guide                     5   AW  $  24.00
-        ------------------------------------------------------------------------------------------
-
 */
 
 # include <iostream>
