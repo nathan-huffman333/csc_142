@@ -33,7 +33,7 @@ int main(){
     float ageInDays = age * days;
 
     // The final message displaying the user's name and age in days is displayed.
-    std::cout << "\nHello" << name << " you are: " << ageInDays << " days old." << std::endl;
+    std::cout << "\nHello " << name << " you are approximately: " << ageInDays << " days old.\n" << std::endl;
 
     return 0;
 };
