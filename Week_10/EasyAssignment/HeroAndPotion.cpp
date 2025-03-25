@@ -1,6 +1,6 @@
 /*
     File name: HeroAndPotion.cpp
-    Description: 
+    Description: This code allows for the player to gain and lose health by taking damage or using a healing potion.
     Name: Nathan Huffman
     Date: 3/24/2025
 */
