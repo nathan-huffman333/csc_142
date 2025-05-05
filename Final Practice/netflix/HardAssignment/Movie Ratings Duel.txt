@@ -1,0 +1,44 @@
+#include <iostream> 
+#include <string>
+#include <utility>
+
+enum class Genre {Action, Comedy, Drama};
+
+struct Movie {
+	std::string title;
+	Genre genre; 
+	float rating;
+};
+
+std::string genreToString(Genre genre1) {
+	if (genre1 == Genre::Action) {
+		return "Action";
+	} else if (genre1 == Genre::Comedy) {
+		return "Comedy";
+	} else {
+		return "Drama";
+	};
+};
+
+std::pair<std::string, float> higherRated(Movie movie1, Movie movie2) {
+	if (movie1.rating > movie2.rating) {
+		return{movie1.title, movie1.rating};
+	} else if (movie2.rating > movie1.rating) {
+		return{movie2.title, movie2.rating};
+	}  else {
+		return {movie1.title, movie1.rating};
+	};
+};
+
+
+int main() {
+	Movie movie1 = {"John Wick", Genre::Action, 4.8};
+	Movie movie2 = {"The Big Lebowski", Genre::Comedy, 4.2};
+	
+	auto higher = higherRated(movie1, movie2);
+
+	std::cout << "Comparing " << movie1.title << " with " << movie2.title << std::endl;
+	std::cout << higher.first << " is a(n) " << genreToString(movie1.genre) << " and has the higher rating of: " << higher.second << std::endl; 
+	
+	return 0;
+}
